@@ -1,3 +1,6 @@
+SK_LOAD_NEW_OPERATION_NAME = "SK_load_new"
+
+
 class Provider:
     def __init__(self, identifier: str, name: str):
         self.identifier = identifier
@@ -75,7 +78,7 @@ skNewCatalog = Catalog(
 
 skNewCatalogSchemeOperation = CatalogSchemeOperation(
     identifier="bb8c681b-fc5f-49d3-817d-7d5f50e811e0",
-    name="SK_load_new",
+    name=SK_LOAD_NEW_OPERATION_NAME,
     scheme_id="8182b5fe-f963-485e-8b62-0a008b2499aa",
     catalog_id="3d8dd856-363d-4dc0-8a3c-614a7ac0af99",
 )

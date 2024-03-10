@@ -1,12 +1,12 @@
 import uuid
 
-from model import AppData, CatalogSchemeOperationInstance, CatalogSchemeOperation
+from model import AppData, CatalogSchemeOperationInstance, CatalogSchemeOperation, SK_LOAD_NEW_OPERATION_NAME
 
 from sk_operation import SkLoadNewOperation
 
 
 def run_operation(scheme_operation: CatalogSchemeOperation, application_data: AppData):
-    if "SK_load_new" in scheme_operation.name:
+    if SK_LOAD_NEW_OPERATION_NAME in scheme_operation.name:
         instance = CatalogSchemeOperationInstance(
             str(uuid.uuid1()),
             scheme_operation.name,

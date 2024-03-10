@@ -9,9 +9,13 @@ class ResourceScraper:
 class PlaywrightResourceScraper(ResourceScraper):
     def run(self):
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=False)
-            self.process(browser)
-            browser.close()
+            browser = None
+            try:
+                browser = p.chromium.launch(headless=False)
+                self.process(browser)
+            finally:
+                if browser is not None:
+                    browser.close()
 
     def process(self, browser):
         pass

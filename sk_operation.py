@@ -2,6 +2,8 @@ import uuid
 
 from model import CatalogSchemeOperationInstance, AppData, app_data, CatalogOperationInstanceResult
 
+from load_operation import LoadOperation
+
 from scraper import ResponseEventHandler, NavigationPlaywrightResourceScraper
 
 
@@ -17,7 +19,7 @@ class ShowcasesResponseEventHandler(ResponseEventHandler):
         self.process_response_handler(response)
 
 
-class SkLoadNewOperation:
+class SkLoadNewOperation(LoadOperation):
     def __init__(self, instance: CatalogSchemeOperationInstance, application_data: AppData):
         self.instance = instance
         self.application_data = application_data
