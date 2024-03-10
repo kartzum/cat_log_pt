@@ -2,7 +2,7 @@ import uuid
 
 from model import CatalogSchemeOperationInstance, AppData, app_data, CatalogOperationInstanceResult
 
-from scrapers import ResponseEventHandler, NavigationPlaywrightResourceScraper
+from scraper import ResponseEventHandler, NavigationPlaywrightResourceScraper
 
 
 class ShowcasesResponseEventHandler(ResponseEventHandler):
